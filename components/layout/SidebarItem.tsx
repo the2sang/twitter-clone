@@ -1,18 +1,21 @@
 import {IconType} from "react-icons";
 import React from "react";
+import {BsDot} from "react-icons/all";
 
 interface SidebarItemProps {
-  label: string,
-  href?: string,
-  icon: IconType
-  onClick?: () => void
+  label: string;
+  href?: string;
+  icon: IconType;
+  onClick?: () => void;
+  alert?: boolean;
 }
 
 const SidebarItem: React.FC<SidebarItemProps> = ({
   label,
   href,
   icon: Icon,
-  onClick
+  onClick,
+  alert
 }) => {
 
   return(
@@ -48,6 +51,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
         <p className="hidden lg:block text-white text-xl">
           {label}
         </p>
+        {alert ? <BsDot className="text-sky-500 absolute -top-4 left-0" size={70} /> : null}
       </div>
     </div>
   )
