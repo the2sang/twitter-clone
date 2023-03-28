@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 
 import useUser from "@/hooks/useUser";
 
@@ -49,5 +49,5 @@ const Avatar: React.FC<AvatarProps> = ({ userId, isLarge, hasBorder }) => {
     </div>
   );
 }
-
+ 
 export default Avatar;

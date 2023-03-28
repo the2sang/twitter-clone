@@ -1,6 +1,6 @@
-import React, { useCallback} from "react";
-import { AiOutlineClose } from "react-icons/ai"
-import Button from "@/components/Button";
+import { useCallback } from "react";
+import { AiOutlineClose } from "react-icons/ai";
+import Button from "./Button";
 
 interface ModalProps {
   isOpen?: boolean;
@@ -18,7 +18,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit, title, body, a
     if (disabled) {
       return;
     }
-
+  
     onClose();
   }, [onClose, disabled]);
 
@@ -38,15 +38,15 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit, title, body, a
     <>
       <div
         className="
-          justify-center
-          items-center
-          flex
-          overflow-x-hidden
-          overflow-y-auto
-          fixed
-          inset-0
-          z-50
-          outline-none
+          justify-center 
+          items-center 
+          flex 
+          overflow-x-hidden 
+          overflow-y-auto 
+          fixed 
+          inset-0 
+          z-50 
+          outline-none 
           focus:outline-none
           bg-neutral-800
           bg-opacity-70
@@ -57,24 +57,24 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit, title, body, a
           <div className="
             h-full
             lg:h-auto
-            border-0
-            rounded-lg
-            shadow-lg
-            relative
-            flex
-            flex-col
-            w-full
-            bg-black
-            outline-none
+            border-0 
+            rounded-lg 
+            shadow-lg 
+            relative 
+            flex 
+            flex-col 
+            w-full 
+            bg-black 
+            outline-none 
             focus:outline-none
             "
           >
             {/*header*/}
             <div className="
-              flex
-              items-center
-              justify-between
-              p-10
+              flex 
+              items-center 
+              justify-between 
+              p-10 
               rounded-t
               "
             >
@@ -83,10 +83,10 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit, title, body, a
               </h3>
               <button
                 className="
-                  p-1
+                  p-1 
                   ml-auto
-                  border-0
-                  text-white
+                  border-0 
+                  text-white 
                   hover:opacity-70
                   transition
                 "

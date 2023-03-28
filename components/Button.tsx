@@ -1,5 +1,3 @@
-import React from "react";
-
 interface ButtonProps {
   label: string;
   secondary?: boolean;
@@ -10,16 +8,16 @@ interface ButtonProps {
   outline?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({
-                                         label,
-                                         secondary,
-                                         fullWidth,
-                                         onClick,
-                                         large,
-                                         disabled,
-                                         outline
-                                       }) => {
-  return (
+const Button: React.FC<ButtonProps> = ({ 
+  label, 
+  secondary, 
+  fullWidth, 
+  onClick, 
+  large, 
+  disabled, 
+  outline 
+}) => {
+  return ( 
     <button
       disabled={disabled}
       onClick={onClick}
@@ -45,7 +43,7 @@ const Button: React.FC<ButtonProps> = ({
     >
       {label}
     </button>
-  );
+   );
 }
-
+ 
 export default Button;

@@ -1,14 +1,13 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-
-
+import PostFeed from "@/components/posts/PostFeed"
+import Header from "@/components/Header"
+import Form from "@/components/Form"
 
 export default function Home() {
   return (
-    <div className="text-3xl text-sky-500">
-      Hello World
-    </div>
+    <>
+      <Header label="Home" />
+      <Form placeholder="What's happening?" />
+      <PostFeed />
+    </>
   )
 }
